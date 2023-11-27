@@ -3,10 +3,8 @@
 $param = $_GET['text'];
 $name = $_GET['nome'];
 
-$censoredParam = str_replace('lorem','***', $param);
-$censoredName = str_replace('alex','****', $name);
-$paramLenght = strlen($param);
-$nameLenght = strlen($name);
+$censored = str_replace($name,'***', $param);
+$lenght = strlen($param);
 ?>
 
 <!DOCTYPE html>
@@ -19,9 +17,8 @@ $nameLenght = strlen($name);
     </head>
 
     <body>
-        <p> <?php echo $param . ' ' . $name ?></p>
-        <p> <?php echo $censoredParam . ' ' . ' Words:' . ' ' . $paramLenght ?> </p>
-        <p> <?php echo $censoredName . ' ' . ' Words:' . ' ' . $nameLenght ?> </p>
+        <p> <?php echo $param ?></p>
+        <p> <?php echo $censored . ' ' . ' Words:' . ' ' . $lenght ?> </p>
     </body>
 
 </html>
